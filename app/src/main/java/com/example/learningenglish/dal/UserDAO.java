@@ -52,19 +52,14 @@ public class UserDAO {
 
     }
     // get List of user in db and can paging
-    public List<User> getListOfUser(int pageIndex) throws Exception {
+    public List<User> getListOfUser() throws Exception {
 
         List<User> users = new ArrayList<>();
-        String query = "select userID,username,password,email,userType,score,isActive from (\n"
-                + "select ROW_NUMBER() over (order by userID ASC) as p, *\n"
-                + "from UserTBL  where userType = 1\n"
-                + ") as x\n"
-                + "where p between (?-1)*10 + 1\n"
-                + "and 10*?";
+        String query = "select userID,username,password,email,userType,score,isActive from \n"
+                + " UserTBL  order by userID desc  \n";
+
         Connection conn = new DBContext().getConnection();
         PreparedStatement ps = conn.prepareStatement(query);
-        ps.setInt(1, pageIndex);
-        ps.setInt(2, pageIndex);
         ResultSet rs = ps.executeQuery();
         while (rs.next()) {
             int userID = rs.getInt("userID");
@@ -219,7 +214,6 @@ public class UserDAO {
         ps.close();
         conn.close();
     }
-
     public void updateUserInfo(String userID, String email, String type, String score) throws Exception {
         String query = "UPDATE UserTBL SET email='" + email + "', userType=" + type + ",score=" + score + " WHERE userID = " + userID;
         Connection conn = new DBContext().getConnection();
