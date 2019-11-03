@@ -10,7 +10,7 @@ import java.sql.SQLException;
 
 public class DBContext {
     private static final String LOG = "DEBUG";
-    private static String ip = "10.21.11.135";//Dorm
+    private static String ip = "192.168.15.104";//Dorm
     private static String port = "1433";
     private static String classs = "net.sourceforge.jtds.jdbc.Driver";
     private static String db = "FunEnglish";
