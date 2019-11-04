@@ -48,18 +48,12 @@ public class ResponseDAO {
         return 0;
     }
     // list response
-    public List<Response> listAllResponse(int pageIndex) throws Exception {
+    public List<Response> listAllResponse() throws Exception {
         List<Response> responses = new ArrayList<>();
-        String query = "select * from (\n"
-                + "select ROW_NUMBER() over (order by responseId desc) as p, *\n"
-                + "from User_Response c  where isActive = 1 \n"
-                + ") as x \n"
-                + "where p between (?-1)*10 + 1\n"
-                + "and 10*?   ORDER BY responseID DESC";
+        String query = "select * from User_Response where isActive = 1 ORDER BY responseID DESC";
         Connection conn = new DBContext().getConnection();
         PreparedStatement ps = conn.prepareStatement(query);
-        ps.setInt(1, pageIndex);
-        ps.setInt(2, pageIndex);
+
         ResultSet rs = ps.executeQuery();
         while (rs.next()) {
             int id = rs.getInt("responseID");

@@ -49,6 +49,7 @@ public class FeedbackActivity extends AppCompatActivity {
                         e.printStackTrace();
                     }
                     Toast.makeText(getApplicationContext(), "Send feedback successfully", Toast.LENGTH_SHORT).show();
+                    finish();
                 }
             }
         });

@@ -25,5 +25,13 @@ public class AdminActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        manageFeedback.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), ManageFeedbackActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 }

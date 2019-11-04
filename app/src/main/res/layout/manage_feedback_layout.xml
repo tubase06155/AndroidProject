@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AbsoluteLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="80dp">
+
+    <TextView
+        android:id="@+id/manageFeedbackName"
+        android:layout_width="179dp"
+        android:layout_height="37dp"
+        android:layout_x="14dp"
+        android:layout_y="20dp"
+        android:gravity="center"
+        android:text="TextView" />
+
+    <TextView
+        android:id="@+id/manageFeedbackTitle"
+        android:layout_width="179dp"
+        android:layout_height="29dp"
+        android:layout_x="216dp"
+        android:layout_y="6dp"
+        android:gravity="center"
+        android:text="TextView" />
+
+    <TextView
+        android:id="@+id/manageFeedbackContact"
+        android:layout_width="179dp"
+        android:layout_height="32dp"
+        android:layout_x="218dp"
+        android:layout_y="40dp"
+        android:gravity="center"
+        android:text="TextView" />
+</AbsoluteLayout>
