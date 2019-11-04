@@ -19,12 +19,12 @@ public class ResponseDAO {
         PreparedStatement ps = conn.prepareStatement(query);
         // set param
         ps.setString(1, null);
-        ps.setNString(2, name);
-        ps.setNString(3, title);
+        ps.setString(2, name);
+        ps.setString(3, title);
         ps.setString(4, "");
         ps.setBoolean(5, isActive);
         ps.setString(6, email);
-        ps.setNString(7, content);
+        ps.setString(7, content);
 
         ps.executeUpdate();
 

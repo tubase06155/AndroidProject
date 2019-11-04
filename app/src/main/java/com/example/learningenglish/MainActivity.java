@@ -39,7 +39,9 @@ public class MainActivity extends AppCompatActivity {
                                 Intent intent = new Intent(getApplicationContext(), AdminActivity.class);
                                 startActivity(intent);
                             } else if (user.getUserType() == 1){
-
+                                Intent intent = new Intent(getApplicationContext(), UserActivity.class);
+                                intent.putExtra("user",user);
+                                startActivity(intent);
                             }
 
                         }

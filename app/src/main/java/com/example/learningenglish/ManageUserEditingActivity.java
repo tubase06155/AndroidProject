@@ -36,7 +36,7 @@ public class ManageUserEditingActivity extends AppCompatActivity {
         editEmail.setText(user.getEmail());
         editScore.setText(user.getScore() + "");
 
-        rdUser.setChecked(true);
+      if (user.getUserType() == 1)  rdUser.setChecked(true); else rdAdmin.setChecked(true);
 
         editUserSave.setOnClickListener(new View.OnClickListener() {
             @Override
