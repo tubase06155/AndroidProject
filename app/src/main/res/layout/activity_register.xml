@@ -4,18 +4,25 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/mourinho"
     tools:context=".RegisterActivity">
 
     <EditText
         android:id="@+id/registerUsername"
         android:layout_width="348dp"
         android:layout_height="67dp"
-        android:layout_marginTop="128dp"
+        android:layout_marginStart="14dp"
+        android:layout_marginTop="64dp"
+        android:background="#11000000"
         android:ems="10"
+
         android:hint="Enter your username"
+        android:textColorHint="#ffffff"
+        android:textColor="#ffffff"
+        android:drawableRight="@drawable/ic_action_adduser"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.492"
+        app:layout_constraintHorizontal_bias="0.346"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -23,49 +30,62 @@
         android:id="@+id/registerEmail"
         android:layout_width="348dp"
         android:layout_height="67dp"
-        android:layout_marginTop="232dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="100dp"
         android:ems="10"
         android:hint="Enter your email"
+        android:textColorHint="#ffffff"
+        android:textColor="#ffffff"
+        android:drawableRight="@drawable/ic_action_mail"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.492"
+        app:layout_constraintHorizontal_bias="0.372"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="@+id/registerUsername" />
 
     <EditText
         android:id="@+id/registerPassword"
         android:layout_width="348dp"
         android:layout_height="67dp"
-        android:layout_marginTop="344dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="30dp"
         android:ems="10"
         android:hint="Enter your password"
+        android:textColorHint="#ffffff"
+        android:textColor="#ffffff"
+        android:drawableRight="@drawable/ic_action_password"
         android:inputType="textPassword"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.492"
+        app:layout_constraintHorizontal_bias="0.333"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/registerEmail" />
 
     <EditText
         android:id="@+id/registerRePassword"
         android:layout_width="348dp"
         android:layout_height="67dp"
-        android:layout_marginTop="464dp"
+        android:layout_marginTop="30dp"
         android:ems="10"
         android:hint="Retype your password"
+        android:textColorHint="#ffffff"
+        android:textColor="#ffffff"
+        android:drawableRight="@drawable/ic_action_password"
         android:inputType="textPassword"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.492"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/registerPassword" />
 
     <Button
         android:id="@+id/registerSubmit"
         android:layout_width="332dp"
         android:layout_height="72dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="80dp"
+        android:background="@drawable/white_button_style"
         android:text="Register"
+        android:textColor="#ffffff"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.464"
+        app:layout_constraintHorizontal_bias="0.468"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/registerRePassword" />
 </androidx.constraintlayout.widget.ConstraintLayout>
