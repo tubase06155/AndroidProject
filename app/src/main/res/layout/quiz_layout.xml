@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AbsoluteLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="200dp">
+
+    <TextView
+        android:id="@+id/quizContent"
+        android:layout_width="382dp"
+        android:layout_height="45dp"
+        android:layout_x="12dp"
+        android:layout_y="12dp"
+        android:text="TextView" />
+
+    <RadioGroup
+        android:layout_width="379dp"
+        android:layout_height="132dp"
+        android:layout_x="13dp"
+        android:layout_y="65dp">
+
+        <RadioButton
+            android:id="@+id/quizOpt1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="RadioButton" />
+
+        <RadioButton
+            android:id="@+id/quizOpt2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="RadioButton" />
+
+        <RadioButton
+            android:id="@+id/quizOpt3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="RadioButton" />
+
+        <RadioButton
+            android:id="@+id/quizOpt4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="RadioButton" />
+    </RadioGroup>
+</AbsoluteLayout>

@@ -47,6 +47,22 @@ public class UserActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+        userGrammar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), GrammarActivity.class);
+                intent.putExtra("user",user);
+                startActivity(intent);
+            }
+        });
+        userReading.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), ReadingActivity.class);
+                intent.putExtra("user",user);
+                startActivity(intent);
+            }
+        });
 
     }
 }

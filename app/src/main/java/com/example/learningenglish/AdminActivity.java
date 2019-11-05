@@ -34,5 +34,14 @@ public class AdminActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+        manageLesson.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), ManageLessonActivity.class);
+                startActivity(intent);
+            }
+        });
+
+
     }
 }
