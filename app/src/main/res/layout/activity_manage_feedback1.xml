@@ -10,6 +10,7 @@
         android:id="@+id/listViewManageFeedback1"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:background="#4A6070"
         tools:layout_editor_absoluteX="106dp"
         tools:layout_editor_absoluteY="243dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>
