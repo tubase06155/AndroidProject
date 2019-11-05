@@ -123,6 +123,30 @@ public class LessonDAO {
         conn.close();
         return lessons;
     }
+    public List<Lesson> listAllLesson() throws Exception {
+        String query = "select * from Lesson where isActive = 1 and category = 1 or category = 3 order by lessonID desc";
+        Connection conn = new DBContext().getConnection();
+        PreparedStatement ps = conn.prepareStatement(query);
+
+        List<Lesson> lessons = new ArrayList<>();
+        ResultSet rs = ps.executeQuery();
+        while (rs.next()) {
+            int id = rs.getInt(1);
+            String title = rs.getString(2);
+            String imagePath = rs.getString(3);
+            int category = rs.getInt(4);
+            String content = rs.getString(5);
+            int difficulty = rs.getInt(6);
+            String audioPath = rs.getString(7);
+
+            Lesson lesson = new Lesson(id, title, imagePath, category, content, difficulty, audioPath);
+            lessons.add(lesson);
+        }
+        rs.close();
+        ps.close();
+        conn.close();
+        return lessons;
+    }
 
     // IndexServlet
     public List<Lesson> getInitLesson() throws Exception {
