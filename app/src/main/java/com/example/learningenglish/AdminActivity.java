@@ -29,7 +29,7 @@ public class AdminActivity extends AppCompatActivity {
         manageFeedback.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(), ManageFeedbackActivity.class);
+                Intent intent = new Intent(getApplicationContext(), ManageFeedback1Activity.class);
                 startActivity(intent);
             }
         });

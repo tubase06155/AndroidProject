@@ -11,18 +11,14 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
-import android.widget.Toast;
 
 import com.example.learningenglish.Entity.Response;
-import com.example.learningenglish.Entity.User;
 import com.example.learningenglish.adapter.FeedbackAdapter;
-import com.example.learningenglish.adapter.UserAdapter;
 import com.example.learningenglish.dal.ResponseDAO;
-import com.example.learningenglish.dal.UserDAO;
 
 import java.util.List;
 
-public class ManageFeedbackActivity extends AppCompatActivity {
+public class ManageFeedback1Activity extends AppCompatActivity {
     ListView listViewManageFeedback;
 
     FeedbackAdapter feedbackAdapter;
@@ -30,12 +26,12 @@ public class ManageFeedbackActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_manage_feedback);
-        listViewManageFeedback = findViewById(R.id.listViewManageFeedback);
+        setContentView(R.layout.activity_manage_feedback1);
+
+        listViewManageFeedback = findViewById(R.id.listViewManageFeedback1);
         setFeedbackAdapter();
         registerForContextMenu(listViewManageFeedback);
     }
-
     public void setFeedbackAdapter(){
         try {
             ResponseDAO responseDAO = new ResponseDAO();
@@ -95,7 +91,7 @@ public class ManageFeedbackActivity extends AppCompatActivity {
             AlertDialog alertDialog = null;
             AlertDialog.Builder builder = new AlertDialog.Builder(this);
             builder.setTitle("Feedback's content \n");
-          builder.setMessage(feedback.getContent());
+            builder.setMessage(feedback.getContent());
             alertDialog = builder.create();
             alertDialog.show();
 
