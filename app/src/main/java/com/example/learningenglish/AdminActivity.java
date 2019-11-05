@@ -13,7 +13,7 @@ public class AdminActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_admin);
-        /// ghfghjghjghjghjgjgh
+        //1233444
         manageUser = findViewById(R.id.manageUser);
         manageLesson = findViewById(R.id.manageLesson);
         manageQuestion = findViewById(R.id.manageQuestion);
