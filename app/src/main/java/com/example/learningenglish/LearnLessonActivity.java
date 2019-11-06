@@ -15,10 +15,10 @@ public class LearnLessonActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_learn_lesson);
         learnLessonContent = findViewById(R.id.learnLessonContent);
-        learnLessonTitle = findViewById(R.id.learnLessonTitle);
+    //    learnLessonTitle = findViewById(R.id.learnLessonTitle);
         Intent intent = getIntent();
         Lesson lesson = (Lesson) intent.getSerializableExtra("lesson");
-        learnLessonTitle.setText(lesson.getTitle());
+      //  learnLessonTitle.setText(lesson.getTitle());
         learnLessonContent.setText(lesson.getContent());
 
     }
