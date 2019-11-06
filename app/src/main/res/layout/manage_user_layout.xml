@@ -42,10 +42,9 @@
         android:textSize="13dp" />
 
     <ImageView
-        android:id="@+id/imageView2"
+        android:id="@+id/imageUser"
         android:layout_width="84dp"
         android:layout_height="70dp"
         android:layout_x="4dp"
-        android:layout_y="5dp"
-        app:srcCompat="@drawable/user" />
+        android:layout_y="5dp"/>
 </AbsoluteLayout>

@@ -23,9 +23,11 @@ public class ManageQuestionActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_manage_question);
         listViewManageQuestion = findViewById(R.id.listViewManageQuestion);
+        setQessonAdapter();
+        registerForContextMenu(listViewManageQuestion);
 
     }
-    public void setLessonAdapter(){
+    public void setQessonAdapter(){
 
         try {
             QuestionDAO questionDAO = new QuestionDAO();

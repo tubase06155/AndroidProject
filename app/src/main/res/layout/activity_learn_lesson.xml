@@ -9,15 +9,24 @@
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
-    <TextView
-        android:id="@+id/learnLessonContent"
-        android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="20dp"
-        android:text="TextView"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        tools:layout_editor_absoluteX="38dp"
+        tools:layout_editor_absoluteY="0dp">
+
+        <TextView
+            android:id="@+id/learnLessonContent"
+            android:layout_width="400dp"
+            android:layout_height="match_parent"
+            android:layout_marginTop="20dp"
+            android:gravity="clip_horizontal"
+            android:paddingLeft="15dp"
+            android:text="TextView"
+            android:textColor="#070707"
+            android:textSize="16dp"
+            android:textStyle="normal"
+            app:firstBaselineToTopHeight="?attr/listPreferredItemPaddingLeft"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
     </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -8,21 +8,27 @@
 
     <ListView
         android:id="@+id/listViewCheckRank"
-        android:layout_width="410dp"
-        android:layout_height="630dp"
-        android:layout_marginTop="100dp"
+        android:layout_width="match_parent"
+        android:layout_height="631dp"
+        android:layout_marginTop="95dp"
+        android:layout_weight="1"
+        android:scrollbarStyle="outsideOverlay"
+        android:scrollbars="vertical"
+        android:scrollingCache="true"
+        android:smoothScrollbar="true"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="@+id/textView2" />
 
     <TextView
         android:id="@+id/textView2"
-        android:layout_width="321dp"
-        android:layout_height="61dp"
-        android:layout_marginTop="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="@drawable/ranking"
         android:gravity="center"
-        android:text="Top 10 User has best score "
-        android:textColor="#A22B25"
+        android:text="Top 10  best score "
+        android:textColor="#25A27A"
         android:textSize="20dp"
         android:textStyle="bold|italic"
         app:layout_constraintEnd_toEndOf="parent"

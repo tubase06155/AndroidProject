@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <AbsoluteLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="120dp">
+    android:layout_height="130dp">
 
     <TextView
         android:id="@+id/lessonTitle"
@@ -9,7 +9,10 @@
         android:layout_height="51dp"
         android:layout_x="13dp"
         android:layout_y="9dp"
-        android:text="TextView" />
+        android:text="TextView"
+        android:textColor="#131212"
+        android:textSize="20dp"
+        android:textStyle="normal|italic" />
 
     <TextView
         android:id="@+id/lessonDifficult"

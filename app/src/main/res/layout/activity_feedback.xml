@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/gradient"
     tools:context=".FeedbackActivity">
 
     <EditText
@@ -11,9 +12,12 @@
         android:layout_width="326dp"
         android:layout_height="62dp"
         android:layout_marginTop="124dp"
+        android:layout_marginBottom="40dp"
+        android:background="@drawable/edittext_style"
         android:ems="10"
         android:hint="Enter your name"
         android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/feedBackEmail"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.494"
         app:layout_constraintStart_toStartOf="parent"
@@ -23,49 +27,58 @@
         android:id="@+id/feedBackEmail"
         android:layout_width="326dp"
         android:layout_height="62dp"
-        android:layout_marginTop="208dp"
+        android:layout_marginBottom="40dp"
+        android:background="@drawable/edittext_style"
         android:ems="10"
         android:hint="Enter your contact"
         android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/feedBackTitle"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.494"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/feedBackName" />
 
     <EditText
         android:id="@+id/feedBackTitle"
         android:layout_width="326dp"
         android:layout_height="62dp"
-        android:layout_marginTop="304dp"
+        android:layout_marginBottom="40dp"
+        android:background="@drawable/edittext_style"
         android:ems="10"
         android:hint="Enter feedback's title"
         android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/feedBackContent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.494"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/feedBackEmail" />
 
     <EditText
         android:id="@+id/feedBackContent"
         android:layout_width="326dp"
         android:layout_height="62dp"
-        android:layout_marginTop="388dp"
+        android:layout_marginBottom="36dp"
+        android:background="@drawable/edittext_style"
         android:ems="10"
         android:hint="Enter feedback's content"
         android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/feedBackSubmit"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintHorizontal_bias="0.493"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/feedBackTitle" />
 
     <Button
         android:id="@+id/feedBackSubmit"
         android:layout_width="326dp"
         android:layout_height="64dp"
         android:layout_marginTop="488dp"
+        android:background="@drawable/button_style"
         android:text="Send feedback"
+        android:textColor="#F7F8FA"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.494"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
