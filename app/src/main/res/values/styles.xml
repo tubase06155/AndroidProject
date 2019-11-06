@@ -13,6 +13,9 @@
 <!--        <item name="android:colorControlHighlight">#ffffff</item>-->
 <!--        <item name="android:textColorHint">#ffffff</item>-->
 <!--    </style>-->
-
+    <style name="textViewStyle">
+        <item name="android:solidColor">#504646</item>
+        <item name="android:paddingBottom">3dp</item>
+    </style>
 
 </resources>

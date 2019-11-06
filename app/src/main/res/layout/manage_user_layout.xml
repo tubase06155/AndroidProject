@@ -1,25 +1,34 @@
 <?xml version="1.0" encoding="utf-8"?>
 <AbsoluteLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
+    style="@style/textViewStyle"
     android:layout_height="80dp">
 
     <TextView
         android:id="@+id/manageUsername"
-        android:layout_width="179dp"
-        android:layout_height="37dp"
-        android:layout_x="14dp"
-        android:layout_y="20dp"
+        android:layout_width="105dp"
+        android:layout_height="56dp"
+        android:layout_x="97dp"
+        android:layout_y="12dp"
         android:gravity="center"
-        android:text="TextView" />
+        android:paddingHorizontal="4dp"
+        android:text="TextView"
+        android:textColor="#A03D3D"
+        android:textSize="20dp"
+        android:textStyle="bold|italic" />
 
     <TextView
         android:id="@+id/manageUserEmail"
         android:layout_width="179dp"
         android:layout_height="29dp"
-        android:layout_x="216dp"
+        android:layout_x="218dp"
         android:layout_y="6dp"
         android:gravity="center"
-        android:text="TextView" />
+        android:text="TextView"
+        android:textColor="#0D0E0D"
+        android:textSize="16dp"
+        android:textStyle="bold" />
 
     <TextView
         android:id="@+id/manageUserScore"
@@ -28,5 +37,15 @@
         android:layout_x="218dp"
         android:layout_y="40dp"
         android:gravity="center"
-        android:text="TextView" />
+        android:text="TextView"
+        android:textColor="#221F1F"
+        android:textSize="13dp" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="84dp"
+        android:layout_height="70dp"
+        android:layout_x="4dp"
+        android:layout_y="5dp"
+        app:srcCompat="@drawable/user" />
 </AbsoluteLayout>
