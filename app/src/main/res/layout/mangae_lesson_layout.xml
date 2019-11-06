@@ -5,27 +5,38 @@
 
     <TextView
         android:id="@+id/manageLessonTitle"
-        android:layout_width="380dp"
+        android:layout_width="343dp"
         android:layout_height="32dp"
-        android:layout_x="14dp"
+        android:layout_x="58dp"
         android:layout_y="12dp"
         android:text="TextView"
-        android:textSize="16dp"
+        android:textColor="#0A0A0A"
+        android:textSize="20dp"
         android:textStyle="bold" />
 
     <TextView
         android:id="@+id/manageLessonSkill"
         android:layout_width="175dp"
         android:layout_height="wrap_content"
-        android:layout_x="16dp"
+        android:layout_x="59dp"
         android:layout_y="51dp"
-        android:text="TextView" />
+        android:text="TextView"
+        android:textColor="#0C0C0C" />
 
     <TextView
         android:id="@+id/manageLessonDiffulty"
-        android:layout_width="185dp"
+        android:layout_width="162dp"
         android:layout_height="wrap_content"
-        android:layout_x="207dp"
-        android:layout_y="52dp"
-        android:text="TextView" />
+        android:layout_x="239dp"
+        android:layout_y="51dp"
+        android:text="TextView"
+        android:textColor="#070707" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:background="@drawable/icon_lesson"
+        android:layout_width="49dp"
+        android:layout_height="37dp"
+        android:layout_x="0dp"
+        android:layout_y="12dp" />
 </AbsoluteLayout>

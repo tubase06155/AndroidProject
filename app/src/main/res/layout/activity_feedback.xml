@@ -73,7 +73,7 @@
         android:layout_width="326dp"
         android:layout_height="64dp"
         android:layout_marginTop="488dp"
-        android:background="@drawable/button_style"
+        android:background="@drawable/white_button_style"
         android:text="Send feedback"
         android:textColor="#F7F8FA"
         app:layout_constraintEnd_toEndOf="parent"

@@ -5,22 +5,32 @@
 
     <TextView
         android:id="@+id/manageQuestionContent"
-        android:layout_width="382dp"
+        android:layout_width="344dp"
         android:layout_height="53dp"
-        android:layout_x="15dp"
+        android:layout_x="53dp"
         android:layout_y="47dp"
         android:text="TextView"
+        android:textColor="#0F0F0F"
         android:textSize="16dp"
         android:textStyle="normal" />
 
     <TextView
         android:id="@+id/manageQuestionLesson"
-        android:layout_width="378dp"
+        android:layout_width="341dp"
         android:layout_height="30dp"
-        android:layout_x="15dp"
+        android:layout_x="52dp"
         android:layout_y="9dp"
         android:text="TextView"
-        android:textSize="18dp"
+        android:textColor="#020202"
+        android:textSize="20dp"
         android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="33dp"
+        android:layout_height="30dp"
+        android:layout_x="11dp"
+        android:layout_y="11dp"
+        android:background="@drawable/icon_question" />
 
 </AbsoluteLayout>
