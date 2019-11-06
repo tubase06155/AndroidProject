@@ -124,7 +124,7 @@ public class LessonDAO {
         return lessons;
     }
     public List<Lesson> listAllLesson() throws Exception {
-        String query = "select * from Lesson where isActive = 1 and category = 1 or category = 3 order by lessonID desc";
+        String query = "select * from Lesson where isActive = 1 and ( category = 1 or category = 3 ) order by lessonID desc";
         Connection conn = new DBContext().getConnection();
         PreparedStatement ps = conn.prepareStatement(query);
 

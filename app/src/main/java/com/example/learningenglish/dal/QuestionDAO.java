@@ -85,19 +85,15 @@ public class QuestionDAO {
         }
         return 0;
     }
-    public List<Question> listQuestion(int pageIndex) throws Exception {
+    public List<Question> listQuestion() throws Exception {
 
         List<Question> questions = new ArrayList<>();
-        String query = "select questionID , lessonID,questionContent,opt1,opt2,opt3,opt4,rightOption,isActive from (\n"
-                + "select ROW_NUMBER() over (order by lessonID desc) as p, *\n"
-                + "from Question c  where isActive = 1\n"
-                + ") as x\n"
-                + "where p between (?-1)*10 + 1\n"
-                + "and 10*?";
+        String query = "select a.questionID, b.lessonID,a.questionContent,a.opt1,a.opt2,a.opt3,a.opt4,a.rightOption,a.isActive \n" +
+                "from Question a inner join Lesson b on a.lessonID = b.lessonID \n" +
+                "where b.isActive = 1 and a.isActive = 1 order by b.lessonID desc";
         Connection conn = new DBContext().getConnection();
         PreparedStatement ps = conn.prepareStatement(query);
-        ps.setInt(1, pageIndex);
-        ps.setInt(2, pageIndex);
+
         ResultSet rs = ps.executeQuery();
 
         while (rs.next()) {

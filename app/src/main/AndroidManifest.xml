@@ -12,7 +12,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ManageLessonActivity"></activity>
+        <activity android:name=".ManageQuestionActivity"></activity>
+        <activity android:name=".ManageAddQuestionActivity" />
+        <activity android:name=".ManageLessonEditingActivity" />
+        <activity android:name=".ManageAddLessonActivity" />
+        <activity android:name=".ManageLessonActivity" />
         <activity android:name=".ReadingActivity" />
         <activity android:name=".DoQuizActivity" />
         <activity android:name=".LearnLessonActivity" />

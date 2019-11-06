@@ -1,5 +1,7 @@
 package com.example.learningenglish.Entity;
 
+import com.example.learningenglish.dal.LessonDAO;
+
 import java.io.Serializable;
 
 public class Question implements Serializable {
@@ -11,8 +13,12 @@ public class Question implements Serializable {
     private  String opt3;
     private   String opt4;
     private   int rightOpt;
+    Lesson lesson = new Lesson();
 
     public Question() {
+    }
+    public Lesson getLesson() throws Exception{
+        return new LessonDAO().getLessonByID(lessonID+"");
     }
 
     public Question(int questionID, int lessonID, String content, String opt1, String opt2, String opt3, String opt4, int rightOpt) {
