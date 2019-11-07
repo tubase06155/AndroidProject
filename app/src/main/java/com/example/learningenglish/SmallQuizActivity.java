@@ -104,7 +104,7 @@ public class SmallQuizActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
             if (showAnswer == 0){
-                if (index > 0) {
+                if (index > 1 ) {
                     index--;
                     smallQuizIndex.setText(index+1+". ");
                     smallQuizContent.setText(listQuestion.get(index).getContent());
@@ -136,7 +136,7 @@ public class SmallQuizActivity extends AppCompatActivity {
             public void onClick(View view) {
 
                 if (showAnswer == 0){
-                    if (index < listQuestion.size() -1){
+                    if (index < listQuestion.size() -2){
                         index++;
                         smallQuizIndex.setText(index+1+". ");
                         smallQuizContent.setText(listQuestion.get(index).getContent());
