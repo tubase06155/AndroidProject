@@ -12,12 +12,12 @@ import com.example.learningenglish.R;
 
 import java.util.List;
 
-public class UserAdapter extends BaseAdapter {
+public class CheckRankAdapter extends BaseAdapter {
     Activity activity;
     int layout;
     List<User> listUser;
 
-    public UserAdapter(Activity activity, int layout, List<User> listUser) {
+    public CheckRankAdapter(Activity activity, int layout, List<User> listUser) {
         this.activity = activity;
         this.layout = layout;
         this.listUser = listUser;
@@ -42,25 +42,25 @@ public class UserAdapter extends BaseAdapter {
     public View getView(int i, View view, ViewGroup viewGroup) {
         TextView manageUsername, manageUserEmail, manageUserScore;
         ImageView imageView;
-      //  int[]  imgs = {R.drawable.ronaldo,R.drawable.messi,R.drawable.morinho};
+        int[]  imgs = {R.drawable.icon1st,R.drawable.icon2nd,R.drawable.icon3rd};
         if (view == null) {
             view = activity.getLayoutInflater().inflate(layout, null);
-            manageUsername = view.findViewById(R.id.manageUsername);
-            manageUserEmail = view.findViewById(R.id.manageUserEmail);
-            manageUserScore = view.findViewById(R.id.manageUserScore);
-            imageView = view.findViewById(R.id.imageUser);
+            manageUsername = view.findViewById(R.id.manageUsername2);
+            manageUserEmail = view.findViewById(R.id.manageUserEmail2);
+            manageUserScore = view.findViewById(R.id.manageUserScore2);
+            imageView = view.findViewById(R.id.imageUser2);
 
             view.setTag(R.id.manageUsername, manageUsername);
             view.setTag(R.id.manageUserEmail, manageUserEmail);
             view.setTag(R.id.manageUserScore, manageUserScore);
-        //    view.setTag(R.id.imageViewFeedBack,imageView);
+            view.setTag(R.id.imageViewFeedBack,imageView);
 
 
         } else {
             manageUsername = (TextView) view.getTag(R.id.manageUsername);
             manageUserEmail = (TextView) view.getTag(R.id.manageUserEmail);
             manageUserScore = (TextView) view.getTag(R.id.manageUserScore);
-          //  imageView = (ImageView) view.getTag(R.id.imageUser);
+            imageView = (ImageView) view.getTag(R.id.imageUser);
 
         }
         final  User user = listUser.get(i);
@@ -68,7 +68,11 @@ public class UserAdapter extends BaseAdapter {
         manageUserEmail.setText(user.getEmail());
         manageUserScore.setText("Score : " + user.getScore());
 
-       // if(i<=2)imageView.setImageResource(imgs[i]);
+        if(i<=2){
+
+            imageView.setImageResource(imgs[i]);
+        }
+        if(i>2)imageView.setImageResource(R.drawable.user);
 
 
         return view;

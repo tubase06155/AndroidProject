@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.widget.ListView;
 
 import com.example.learningenglish.Entity.User;
+import com.example.learningenglish.adapter.CheckRankAdapter;
 import com.example.learningenglish.adapter.UserAdapter;
 import com.example.learningenglish.dal.UserDAO;
 
@@ -22,7 +23,7 @@ public class CheckRankActivity extends AppCompatActivity {
         UserDAO userDAO = new UserDAO();
         try {
             List<User> listUser = userDAO.getListOfRank();
-         UserAdapter   userAdapter = new UserAdapter(this, R.layout.manage_user_layout, listUser);
+         CheckRankAdapter userAdapter = new CheckRankAdapter(this, R.layout.manage_ranking_of_user_layout, listUser);
             listViewCheckRank.setAdapter(userAdapter);
         } catch (Exception e) {
             e.printStackTrace();

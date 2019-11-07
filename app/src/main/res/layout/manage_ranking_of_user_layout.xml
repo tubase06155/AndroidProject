@@ -5,8 +5,15 @@
     style="@style/textViewStyle"
     android:layout_height="80dp">
 
+    <ImageView
+        android:id="@+id/imageUser2"
+        android:layout_width="84dp"
+        android:layout_height="70dp"
+        android:layout_x="4dp"
+        android:layout_y="5dp" />
+
     <TextView
-        android:id="@+id/manageUsername"
+        android:id="@+id/manageUsername2"
         android:layout_width="105dp"
         android:layout_height="56dp"
         android:layout_x="97dp"
@@ -19,7 +26,7 @@
         android:textStyle="bold|italic" />
 
     <TextView
-        android:id="@+id/manageUserEmail"
+        android:id="@+id/manageUserEmail2"
         android:layout_width="179dp"
         android:layout_height="29dp"
         android:layout_x="218dp"
@@ -31,7 +38,7 @@
         android:textStyle="bold" />
 
     <TextView
-        android:id="@+id/manageUserScore"
+        android:id="@+id/manageUserScore2"
         android:layout_width="179dp"
         android:layout_height="32dp"
         android:layout_x="218dp"
@@ -40,12 +47,4 @@
         android:text="TextView"
         android:textColor="#221F1F"
         android:textSize="13dp" />
-
-    <ImageView
-        android:id="@+id/imageUser"
-        android:layout_width="84dp"
-        android:layout_height="70dp"
-        android:layout_x="4dp"
-        android:layout_y="5dp"
-        android:background="@drawable/user" />
 </AbsoluteLayout>
