@@ -2,6 +2,8 @@ package com.example.learningenglish;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -14,6 +16,7 @@ import com.example.learningenglish.Entity.Lesson;
 import com.example.learningenglish.Entity.Question;
 import com.example.learningenglish.Entity.User;
 import com.example.learningenglish.adapter.QuizAdapter;
+import com.example.learningenglish.dal.LessonDAO;
 import com.example.learningenglish.dal.QuestionDAO;
 
 import java.util.ArrayList;
@@ -115,6 +118,7 @@ public class SmallQuizActivity extends AppCompatActivity {
                     smallQuizNext.setEnabled(true);
                 } else if (index == 1){
                     smallQuizPrevious.setEnabled(false);
+                    smallQuizNext.setEnabled(true);
                     index--;
                     smallQuizIndex.setText(index+1+". ");
                     smallQuizContent.setText(listQuestion.get(index).getContent());
@@ -147,6 +151,7 @@ public class SmallQuizActivity extends AppCompatActivity {
                         smallQuizPrevious.setEnabled(true);
                     } else if (index == listQuestion.size()-2){
                         smallQuizNext.setEnabled(false);
+                        smallQuizPrevious.setEnabled(true);
                         index++;
                         smallQuizIndex.setText(index+1+". ");
                         smallQuizContent.setText(listQuestion.get(index).getContent());
@@ -166,6 +171,37 @@ public class SmallQuizActivity extends AppCompatActivity {
         smallQuizFinish.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                AlertDialog alertDialog = null;
+                AlertDialog.Builder builder = new AlertDialog.Builder(getApplicationContext());
+                builder.setTitle("Are you sure to finish the quiz ? \n");
+                builder.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        for (int j = 0; j < listQuestion.size(); j++)
+                        {
+                            if (chooseOpt.get(j) == rightOpt.get(j))
+                            {
+                                numberRightQuestion++;
+
+                            }
+                        }
+                      //  smallQuizFinish.setEnabled(false);
+
+                        Toast.makeText(getApplicationContext(),numberRightQuestion+"/" + chooseOpt.size(),Toast.LENGTH_SHORT).show();
+
+
+                    }
+                });
+                builder.setNegativeButton("No", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+
+                    }
+                });
+                ///chcvhcvhcvjcvj
+                alertDialog = builder.create();
+                alertDialog.show();
+
 
             }
         });
