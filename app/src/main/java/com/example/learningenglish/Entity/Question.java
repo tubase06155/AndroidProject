@@ -1,5 +1,7 @@
 package com.example.learningenglish.Entity;
 
+import androidx.annotation.NonNull;
+
 import com.example.learningenglish.dal.LessonDAO;
 
 import java.io.Serializable;

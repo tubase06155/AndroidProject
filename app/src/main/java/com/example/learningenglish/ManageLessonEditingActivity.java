@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.Spinner;
 import android.widget.TextView;
@@ -20,7 +21,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ManageLessonEditingActivity extends AppCompatActivity {
-    TextView editLessonTitle, editLessonContent;
+    EditText editLessonTitle, editLessonContent;
     RadioButton rdEditLessonReading, rdEditLessonGrammar;
     Spinner spinnerEditLessonDifficulty;
     Button editLessonSubmit;

@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ManageAddQuestionActivity">
+
+
+    <Spinner
+        android:id="@+id/spinnerTrueEditQuestion"
+        android:layout_width="126dp"
+        android:layout_height="39dp"
+        android:layout_marginTop="296dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.589"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="115dp"
+        android:layout_height="37dp"
+        android:layout_marginTop="312dp"
+        android:text="True Answer"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.057"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/editQuestionSubmit"
+        android:layout_width="377dp"
+        android:layout_height="52dp"
+        android:layout_marginTop="384dp"
+        android:text="Edit Question"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.47"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/editQuestionContent"
+        android:layout_width="387dp"
+        android:layout_height="43dp"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:hint="Enter question content"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.708"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/editQuestionOpt1"
+        android:layout_width="387dp"
+        android:layout_height="43dp"
+        android:layout_marginTop="52dp"
+        android:ems="10"
+        android:hint="Enter question answer 1"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.708"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/editQuestionOpt2"
+        android:layout_width="387dp"
+        android:layout_height="43dp"
+        android:layout_marginTop="140dp"
+        android:ems="10"
+        android:hint="Enter question answer 2"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.708"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/editQuestionOpt3"
+        android:layout_width="387dp"
+        android:layout_height="43dp"
+        android:layout_marginTop="192dp"
+        android:ems="10"
+        android:hint="Enter question answer 3"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.708"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/editQuestionOpt4"
+        android:layout_width="387dp"
+        android:layout_height="43dp"
+        android:layout_marginTop="236dp"
+        android:ems="10"
+        android:hint="Enter question answer 4"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

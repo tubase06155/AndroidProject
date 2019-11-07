@@ -12,7 +12,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ManageQuestionActivity"></activity>
+        <activity android:name=".ManageQuestionEditingActivity"></activity>
+        <activity android:name=".ManageQuestionActivity" />
         <activity android:name=".ManageAddQuestionActivity" />
         <activity android:name=".ManageLessonEditingActivity" />
         <activity android:name=".ManageAddLessonActivity" />
