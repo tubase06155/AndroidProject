@@ -68,7 +68,7 @@ public class GrammarActivity extends AppCompatActivity {
             Intent intent1 = getIntent();
             User user = (User) intent1.getSerializableExtra("user");
 
-            Intent intent = new Intent(this,DoQuizActivity.class);
+            Intent intent = new Intent(this,SmallQuizActivity.class);
 
             intent.putExtra("user",user);
             intent.putExtra("lesson",lesson);

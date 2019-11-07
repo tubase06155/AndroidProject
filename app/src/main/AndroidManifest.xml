@@ -12,7 +12,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ManageQuestionEditingActivity"></activity>
+        <activity android:name=".SmallQuizActivity"></activity>
+        <activity android:name=".slide.ScreenSlideActivity" />
+        <activity android:name=".ManageQuestionEditingActivity" />
         <activity android:name=".ManageQuestionActivity" />
         <activity android:name=".ManageAddQuestionActivity" />
         <activity android:name=".ManageLessonEditingActivity" />
