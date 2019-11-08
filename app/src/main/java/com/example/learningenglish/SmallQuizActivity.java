@@ -18,6 +18,7 @@ import com.example.learningenglish.Entity.User;
 import com.example.learningenglish.adapter.QuizAdapter;
 import com.example.learningenglish.dal.LessonDAO;
 import com.example.learningenglish.dal.QuestionDAO;
+import com.example.learningenglish.dal.UserDAO;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -33,6 +34,8 @@ public class SmallQuizActivity extends AppCompatActivity {
     int numberRightQuestion = 0;
     int index = 0;
     int showAnswer = 0;
+    int currentScore = 0;
+    Lesson lesson;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,7 +53,7 @@ public class SmallQuizActivity extends AppCompatActivity {
 
 
         Intent intent = getIntent();
-        Lesson lesson = (Lesson) intent.getSerializableExtra("lesson");
+         lesson = (Lesson) intent.getSerializableExtra("lesson");
          user = (User) intent.getSerializableExtra("user");
 
         try {
@@ -128,7 +131,7 @@ public class SmallQuizActivity extends AppCompatActivity {
                     smallQuizAns4.setText(listQuestion.get(index).getOpt4());
                 }
                 loadChooseAnswer();
-                Toast.makeText(getApplicationContext(),index+"",Toast.LENGTH_SHORT).show();
+               // Toast.makeText(getApplicationContext(),index+"",Toast.LENGTH_SHORT).show();
 
             }
             }
@@ -162,7 +165,7 @@ public class SmallQuizActivity extends AppCompatActivity {
 
                     }
                     loadChooseAnswer();
-                    Toast.makeText(getApplicationContext(),index+"",Toast.LENGTH_SHORT).show();
+                   // Toast.makeText(getApplicationContext(),index+"",Toast.LENGTH_SHORT).show();
                 }
             }
         });
@@ -172,7 +175,7 @@ public class SmallQuizActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 AlertDialog alertDialog = null;
-                AlertDialog.Builder builder = new AlertDialog.Builder(getApplicationContext());
+                AlertDialog.Builder builder = new AlertDialog.Builder(SmallQuizActivity.this);
                 builder.setTitle("Are you sure to finish the quiz ? \n");
                 builder.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
                     @Override
@@ -187,7 +190,47 @@ public class SmallQuizActivity extends AppCompatActivity {
                         }
                       //  smallQuizFinish.setEnabled(false);
 
-                        Toast.makeText(getApplicationContext(),numberRightQuestion+"/" + chooseOpt.size(),Toast.LENGTH_SHORT).show();
+                       // Toast.makeText(getApplicationContext(),numberRightQuestion+"/" + chooseOpt.size(),Toast.LENGTH_SHORT).show();
+
+                        try {
+                             currentScore = new UserDAO().getCurrentScoreByUserID(user.getUserID());
+                            new UserDAO().updateScoreByUserID(user.getUserID(),currentScore,numberRightQuestion*10);
+                            currentScore = new UserDAO().getCurrentScoreByUserID(user.getUserID());
+                        } catch (Exception e) {
+                            e.printStackTrace();
+                        }
+                        AlertDialog alertDialog = null;
+                        AlertDialog.Builder builder = new AlertDialog.Builder(SmallQuizActivity.this);
+                        builder.setTitle("Result \n");
+                        builder.setMessage("You got " + numberRightQuestion + "/" + listQuestion.size() + "points \n"  +
+                                "Your score now is " + currentScore + "\n" +
+                                "Do you want to do quiz again ?");
+                        builder.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialogInterface, int i) {
+                                Intent intent = new Intent(SmallQuizActivity.this,SmallQuizActivity.class);
+
+                                intent.putExtra("user",user);
+                                intent.putExtra("lesson",lesson);
+                                startActivity(intent);
+                            }
+                        });
+                        builder.setNegativeButton("No", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialogInterface, int i) {
+                                Intent intent = new Intent(SmallQuizActivity.this,UserActivity.class);
+                                user.setScore(currentScore);
+                                intent.putExtra("user",user);
+                                //intent.putExtra("lesson",lesson);
+                                startActivity(intent);
+                            }
+                        });
+                        alertDialog = builder.create();
+                        alertDialog.show();
+
+
+
+
 
 
                     }
