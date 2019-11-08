@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.Button;
 import android.widget.RadioButton;
 import android.widget.TextView;
 
@@ -42,6 +43,7 @@ public class QuizAdapter extends BaseAdapter {
     @Override
     public View getView(int i, View view, ViewGroup viewGroup) {
         TextView quizContent;
+        Button btnSubmit;
         RadioButton quizOpt1, quizOpt2, quizOpt3, quizOpt4;
 
         if (view == null) {
@@ -51,12 +53,14 @@ public class QuizAdapter extends BaseAdapter {
             quizOpt2 = view.findViewById(R.id.quizOpt2);
             quizOpt3 = view.findViewById(R.id.quizOpt3);
             quizOpt4 = view.findViewById(R.id.quizOpt4);
+            btnSubmit = view.findViewById(R.id.doQuizSubmit);
 
             view.setTag(R.id.quizContent, quizContent);
             view.setTag(R.id.quizOpt1, quizOpt1);
             view.setTag(R.id.quizOpt2, quizOpt2);
             view.setTag(R.id.quizOpt3, quizOpt3);
             view.setTag(R.id.quizOpt4, quizOpt4);
+            view.setTag(R.id.doQuizSubmit, btnSubmit);
 
 
         } else {
@@ -65,6 +69,7 @@ public class QuizAdapter extends BaseAdapter {
             quizOpt2 = (RadioButton) view.getTag(R.id.quizOpt2);
             quizOpt3 = (RadioButton) view.getTag(R.id.quizOpt3);
             quizOpt4 = (RadioButton) view.getTag(R.id.quizOpt4);
+            btnSubmit = (Button) view.getTag(R.id.doQuizSubmit);
 
         }
         final  Question question = listQuestion.get(i);
@@ -73,6 +78,12 @@ public class QuizAdapter extends BaseAdapter {
         quizOpt2.setText(question.getOpt2());
         quizOpt3.setText(question.getOpt3());
         quizOpt4.setText(question.getOpt4());
+        btnSubmit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
 
 
         return view;

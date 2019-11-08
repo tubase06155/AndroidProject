@@ -12,7 +12,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".SmallQuizActivity"></activity>
+        <activity android:name=".MainActivity"></activity>
+        <activity android:name=".SmallQuizActivity" />
         <activity android:name=".slide.ScreenSlideActivity" />
         <activity android:name=".ManageQuestionEditingActivity" />
         <activity android:name=".ManageQuestionActivity" />
@@ -32,7 +33,7 @@
         <activity android:name=".ManageUserActivity" />
         <activity android:name=".AdminActivity" />
         <activity android:name=".RegisterActivity" />
-        <activity android:name=".MainActivity">
+        <activity android:name=".WelcomeActiviy">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

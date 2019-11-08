@@ -65,6 +65,20 @@
         app:layout_constraintTop_toBottomOf="@+id/userReading" />
 
     <Button
+        android:id="@+id/userCheckRank"
+        android:layout_width="340dp"
+        android:layout_height="77dp"
+        android:layout_marginTop="15dp"
+        android:background="#ffffff"
+        android:drawableLeft="@drawable/rankicon2"
+        android:gravity="fill"
+        android:text="                     Check Rank"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.478"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/userFeedback" />
+
+    <Button
         android:id="@+id/userFeedback"
         android:layout_width="340dp"
         android:layout_height="77dp"
@@ -78,17 +92,4 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/userGrammar" />
 
-    <Button
-        android:id="@+id/userCheckRank"
-        android:layout_width="340dp"
-        android:layout_height="77dp"
-        android:layout_marginTop="15dp"
-        android:background="#ffffff"
-        android:drawableLeft="@drawable/rankicon2"
-        android:gravity="fill"
-        android:text="                     Check Rank"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.478"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/userFeedback" />
 </androidx.constraintlayout.widget.ConstraintLayout>
