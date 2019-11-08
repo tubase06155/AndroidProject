@@ -53,14 +53,14 @@ public class CheckRankAdapter extends BaseAdapter {
             view.setTag(R.id.manageUsername, manageUsername);
             view.setTag(R.id.manageUserEmail, manageUserEmail);
             view.setTag(R.id.manageUserScore, manageUserScore);
-            view.setTag(R.id.imageViewFeedBack,imageView);
+            view.setTag(R.id.imageUser2,imageView);
 
 
         } else {
             manageUsername = (TextView) view.getTag(R.id.manageUsername);
             manageUserEmail = (TextView) view.getTag(R.id.manageUserEmail);
             manageUserScore = (TextView) view.getTag(R.id.manageUserScore);
-            imageView = (ImageView) view.getTag(R.id.imageUser);
+            imageView = (ImageView) view.getTag(R.id.imageUser2);
 
         }
         final  User user = listUser.get(i);
@@ -73,6 +73,7 @@ public class CheckRankAdapter extends BaseAdapter {
             imageView.setImageResource(imgs[i]);
         }
         if(i>2)imageView.setImageResource(R.drawable.user);
+
 
 
         return view;
