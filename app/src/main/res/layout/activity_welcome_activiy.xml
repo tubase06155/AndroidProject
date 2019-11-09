@@ -10,9 +10,14 @@
         android:id="@+id/textView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#67B1E9"
+        android:background="@drawable/gradient"
         android:gravity="center"
-        android:text="Welcome"
-        android:textSize="30dp"
-        android:textStyle="bold" />
+        android:text="Learning English"
+        android:textColor="#ffffff"
+        android:textSize="40dp"
+        android:shadowColor="#fff"
+        android:shadowDx="10"
+        android:shadowDy="10"
+        android:shadowRadius="10"
+        android:fontFamily="@font/great_vibel_font" />
 </RelativeLayout>
