@@ -8,9 +8,10 @@
     tools:context=".UserActivity">
 
     <ImageView
+        android:id="@+id/background_top"
         android:layout_width="match_parent"
         android:layout_height="270dp"
-        android:background="@drawable/gradient" />
+        android:background="@drawable/gradient_list" />
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="match_parent"
@@ -31,7 +32,7 @@
                 android:id="@+id/tvUsername"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="5dp"
                 android:text="CR7"
                 android:textColor="@android:color/white"
                 android:textSize="20dp"
@@ -57,34 +58,37 @@
                 android:layout_height="400dp"
                 android:layout_weight="1"
                 android:gravity="center_horizontal"
+                android:paddingLeft="11dp"
                 android:orientation="vertical">
 
                 <Button
                     android:id="@+id/userReading"
                     android:layout_width="140dp"
                     android:layout_height="140dp"
-                    android:background="@drawable/reading" />
+                    android:shadowRadius="5"
+                    android:background="@drawable/reading" >
+                </Button>
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="20dp"
                     android:text="Reading"
-                    android:textSize="18dp"
-                    android:textColor="#1EAA87" />
+                    android:textSize="20dp"
+                    android:textColor="#A20E08" />
 
                 <Button
                     android:id="@+id/userFeedback"
                     android:layout_width="140dp"
                     android:layout_height="140dp"
                     android:layout_marginTop="25dp"
-                    android:background="@drawable/feedback_background" />
+                    android:background="@drawable/feedback3" />
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="20dp"
-                    android:textColor="#1EAA87"
-                    android:textSize="18dp"
+                    android:textSize="20dp"
+                    android:textColor="#A20E08"
                     android:text="Feedback" />
             </LinearLayout>
 
@@ -99,15 +103,15 @@
                     android:layout_width="140dp"
                     android:layout_height="140dp"
                     android:layout_marginLeft="25dp"
-                    android:background="@drawable/grammar" />
+                    android:background="@drawable/grammar3" />
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="20dp"
                     android:layout_marginLeft="60dp"
                     android:text="Grammar"
-                    android:textSize="18dp"
-                    android:textColor="#1EAA87" />
+                    android:textSize="20dp"
+                    android:textColor="#A20E08" />
 
                 <Button
                     android:id="@+id/userCheckRank"
@@ -121,9 +125,9 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="20dp"
                     android:layout_marginLeft="63dp"
-                    android:textSize="18dp"
                     android:text="Ranking"
-                    android:textColor="#1EAA87" />
+                    android:textSize="20dp"
+                    android:textColor="#A20E08" />
             </LinearLayout>
 
         </LinearLayout>

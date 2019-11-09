@@ -3,9 +3,12 @@ package com.example.learningenglish;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.graphics.drawable.AnimationDrawable;
 import android.os.Bundle;
 import android.view.View;
+import android.view.animation.Animation;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.learningenglish.Entity.User;
@@ -13,6 +16,7 @@ import com.example.learningenglish.Entity.User;
 public class UserActivity extends AppCompatActivity {
     TextView tvUsername, tvScore;
     Button userReading, userGrammar, userFeedback, userCheckRank;
+    ImageView background_top;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,6 +29,12 @@ public class UserActivity extends AppCompatActivity {
         userGrammar = findViewById(R.id.userGrammar);
         userFeedback = findViewById(R.id.userFeedback);
         userCheckRank = findViewById(R.id.userCheckRank);
+        background_top = findViewById(R.id.background_top);
+
+        AnimationDrawable animationDrawable = (AnimationDrawable)background_top.getBackground();
+        animationDrawable.setEnterFadeDuration(2000);
+        animationDrawable.setExitFadeDuration(4000);
+        animationDrawable.start();
 
         Intent intent = getIntent();
         final User user =(User)intent.getSerializableExtra("user");

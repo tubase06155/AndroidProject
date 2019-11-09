@@ -16,24 +16,26 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical">
+
             <TextView
                 android:id="@+id/imageView"
                 android:layout_width="240dp"
                 android:layout_height="120dp"
                 android:layout_gravity="center_horizontal"
-                android:textColor="#ffffff"
-                android:text="Learning English"
-                android:textSize="40dp"
-                android:gravity="center"
+                android:layout_marginStart="145dp"
+                android:layout_marginTop="57dp"
+                android:layout_marginEnd="146dp"
+                android:layout_marginBottom="109dp"
                 android:fontFamily="@font/great_vibel_font"
+                android:gravity="center"
                 android:shadowColor="#fff"
                 android:shadowDx="10"
                 android:shadowDy="10"
                 android:shadowRadius="10"
-                android:layout_marginStart="145dp"
-                android:layout_marginTop="57dp"
-                android:layout_marginEnd="146dp"
-                android:layout_marginBottom="109dp"/>
+                android:text="Learning English"
+                android:textColor="#ffffff"
+                android:textSize="40dp" />
+
             <EditText
                 android:id="@+id/loginUsername"
                 android:layout_width="match_parent"

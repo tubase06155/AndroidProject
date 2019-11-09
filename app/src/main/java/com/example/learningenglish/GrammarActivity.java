@@ -10,14 +10,11 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
-import android.widget.Toast;
 
 import com.example.learningenglish.Entity.Lesson;
 import com.example.learningenglish.Entity.User;
 import com.example.learningenglish.adapter.LessonAdapter;
-import com.example.learningenglish.adapter.UserAdapter;
 import com.example.learningenglish.dal.LessonDAO;
-import com.example.learningenglish.dal.UserDAO;
 
 import java.util.List;
 
@@ -37,7 +34,7 @@ public class GrammarActivity extends AppCompatActivity {
         LessonDAO lessonDAO = new LessonDAO();
         try {
             listLesson = lessonDAO.listLessonByCategory("3");
-            lessonAdapter = new LessonAdapter(this, R.layout.lesson_layout, listLesson);
+            lessonAdapter = new LessonAdapter(this, R.layout.lesson_grammar_layout, listLesson);
             listViewGrammarLesson.setAdapter(lessonAdapter);
         } catch (Exception e) {
             e.printStackTrace();

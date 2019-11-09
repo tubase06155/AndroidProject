@@ -34,9 +34,9 @@
 
     <TextView
         android:id="@+id/textView3"
-        android:background="@drawable/icon_lesson"
-        android:layout_width="49dp"
+        android:layout_width="37dp"
         android:layout_height="37dp"
-        android:layout_x="0dp"
-        android:layout_y="12dp" />
+        android:layout_x="7dp"
+        android:layout_y="19dp"
+        android:background="@drawable/icon_lesson" />
 </AbsoluteLayout>

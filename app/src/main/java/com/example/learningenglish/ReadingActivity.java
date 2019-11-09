@@ -31,7 +31,7 @@ public class ReadingActivity extends AppCompatActivity {
         LessonDAO lessonDAO = new LessonDAO();
         try {
             listLesson = lessonDAO.listLessonByCategory("1");
-            lessonAdapter = new LessonAdapter(this, R.layout.lesson_layout, listLesson);
+            lessonAdapter = new LessonAdapter(this, R.layout.lesson_reading_layout, listLesson);
             listViewReadingLesson.setAdapter(lessonAdapter);
         } catch (Exception e) {
             e.printStackTrace();
