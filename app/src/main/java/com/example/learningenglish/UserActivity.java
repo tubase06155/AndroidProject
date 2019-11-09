@@ -29,7 +29,10 @@ public class UserActivity extends AppCompatActivity {
         Intent intent = getIntent();
         final User user =(User)intent.getSerializableExtra("user");
 
-        tvUsername.setText("Welcome " + user.getUsername() + "  !" );
+        String name = user.getUsername();
+        String s1 = name.substring(0, 1).toUpperCase();;
+
+        tvUsername.setText( s1 + name.substring(1));
         tvScore.setText("Your score: " +user.getScore() );
 
         userCheckRank.setOnClickListener(new View.OnClickListener() {
