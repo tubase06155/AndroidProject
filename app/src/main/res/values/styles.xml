@@ -1,11 +1,11 @@
 <resources>
 
     <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimary</item>
-        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
-        <item name="colorAccent">@color/colorAccent</item>
+        <item name="colorPrimaryDark">#60D4E4</item>
+        <item name="colorAccent">#60D4E4</item>
     </style>
 <!--    <style name="myEditTextStyle" parent="Theme.AppCompat.Light.DarkActionBar">-->
 <!--        <item name="android:colorControlNormal">#ffffff</item>-->
@@ -16,6 +16,12 @@
     <style name="textViewStyle">
         <item name="android:solidColor">#504646</item>
         <item name="android:paddingBottom">3dp</item>
+    </style>
+
+    <style name="My_spnniner">
+        <item name="android:selectedWeekBackgroundColor">@android:color/holo_red_light</item>
+        <item name="android:textColor">@android:color/holo_red_light</item>
+        <item name="android:textSize">14dp</item>
     </style>
 
 </resources>
