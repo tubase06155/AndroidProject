@@ -9,6 +9,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -33,9 +34,10 @@ public class SmallQuizActivity extends AppCompatActivity {
     List<Integer> chooseOpt = new ArrayList<Integer>();
     int numberRightQuestion = 0;
     int index = 0;
-    int showAnswer = 0;
+    //int showAnswer = 0;
     int currentScore = 0;
     Lesson lesson;
+    RadioGroup radioGroupAns;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,6 +45,7 @@ public class SmallQuizActivity extends AppCompatActivity {
         setContentView(R.layout.activity_small_quiz);
         smallQuizContent = findViewById(R.id.smallQuizContent);
         smallQuizIndex = findViewById(R.id.smallQuizIndex);
+        radioGroupAns = findViewById(R.id.radioGroupAns);
         smallQuizAns1 = findViewById(R.id.smallQuizAns1);
         smallQuizAns2 = findViewById(R.id.smallQuizAns2);
         smallQuizAns3 = findViewById(R.id.smallQuizAns3);
@@ -74,7 +77,7 @@ public class SmallQuizActivity extends AppCompatActivity {
                 rightOpt.add(listQuestion.get(i).getRightOpt());
                 chooseOpt.add(0);
             }
-            loadChooseAnswer();
+            //loadChooseAnswer(index);
 
 
 
@@ -87,29 +90,36 @@ public class SmallQuizActivity extends AppCompatActivity {
         actionForNextClick();
         actionForPreviousClick();
         actionForFinishClick();
-
+        setUpActionForRadioButton();
     }
-    public void action_smallQuizAns1_click(View view){
-     chooseOpt.set(index,1);
-    }
-    public void action_smallQuizAns2_click(View view){
-        chooseOpt.set(index,2);
 
-    }
-    public void action_smallQuizAns3_click(View view){
-        chooseOpt.set(index,3);
+    private void setUpActionForRadioButton() {
+        smallQuizAns1.setOnCheckedChangeListener((view, isChecked) -> {
+            if (isChecked)
+            chooseOpt.set(index, 1);
+        });
 
-    }
-    public void action_smallQuizAns4_click(View view){
-        chooseOpt.set(index,4);
+        smallQuizAns2.setOnCheckedChangeListener((view, isChecked) -> {
+            if (isChecked)
+            chooseOpt.set(index, 2);
+        });
 
+        smallQuizAns3.setOnCheckedChangeListener((view, isChecked) -> {
+            if (isChecked)
+            chooseOpt.set(index, 3);
+        });
+
+        smallQuizAns4.setOnCheckedChangeListener((view, isChecked) -> {
+            if (isChecked)
+            chooseOpt.set(index, 4);
+        });
     }
 
     private  void actionForPreviousClick(){
         smallQuizPrevious.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-            if (showAnswer == 0){
+                radioGroupAns.clearCheck();
                 if (index > 1 ) {
                     index--;
                     smallQuizIndex.setText(index+1+". ");
@@ -130,11 +140,11 @@ public class SmallQuizActivity extends AppCompatActivity {
                     smallQuizAns3.setText(listQuestion.get(index).getOpt3());
                     smallQuizAns4.setText(listQuestion.get(index).getOpt4());
                 }
-                loadChooseAnswer();
-               // Toast.makeText(getApplicationContext(),index+"",Toast.LENGTH_SHORT).show();
+                loadChooseAnswer(index);
+               // Toast.makeText(getApplicationContext(),chooseOpt.get(index),Toast.LENGTH_SHORT).show();
 
             }
-            }
+
         });
     }
     private  void actionForNextClick(){
@@ -142,7 +152,8 @@ public class SmallQuizActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                if (showAnswer == 0){
+                    radioGroupAns.clearCheck();
+
                     if (index < listQuestion.size() -2){
                         index++;
                         smallQuizIndex.setText(index+1+". ");
@@ -164,10 +175,10 @@ public class SmallQuizActivity extends AppCompatActivity {
                         smallQuizAns4.setText(listQuestion.get(index).getOpt4());
 
                     }
-                    loadChooseAnswer();
-                   // Toast.makeText(getApplicationContext(),index+"",Toast.LENGTH_SHORT).show();
+                    loadChooseAnswer(index);
+                   // Toast.makeText(getApplicationContext(),chooseOpt.get(index),Toast.LENGTH_SHORT).show();
                 }
-            }
+
         });
     }
     private  void actionForFinishClick(){
@@ -251,20 +262,23 @@ public class SmallQuizActivity extends AppCompatActivity {
     }
 
 
-    private  void loadChooseAnswer(){
-        smallQuizAns1.setChecked(false);
-        smallQuizAns2.setChecked(false);
-        smallQuizAns3.setChecked(false);
-        smallQuizAns4.setChecked(false);
-        if (chooseOpt.get(index) == 1){
+    private  void loadChooseAnswer(int index1){
+
+        if (chooseOpt.get(index1) == 1){
             smallQuizAns1.setChecked(true);
-        } else   if (chooseOpt.get(index) == 2){
+        } else   if (chooseOpt.get(index1) == 2){
             smallQuizAns2.setChecked(true);
-        } else  if (chooseOpt.get(index) == 3){
+        } else  if (chooseOpt.get(index1) == 3){
             smallQuizAns3.setChecked(true);
-        } else  if (chooseOpt.get(index) == 4){
+        } else  if (chooseOpt.get(index1) == 4){
             smallQuizAns4.setChecked(true);
+        } else {
+            smallQuizAns1.setChecked(false);
+            smallQuizAns2.setChecked(false);
+            smallQuizAns3.setChecked(false);
+            smallQuizAns4.setChecked(false);
         }
+
 
 
     }

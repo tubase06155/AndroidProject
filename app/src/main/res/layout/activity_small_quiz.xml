@@ -28,6 +28,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <RadioGroup
+        android:id="@+id/radioGroupAns"
         android:layout_width="371dp"
         android:layout_height="147dp"
         android:layout_marginTop="80dp"
@@ -39,28 +40,24 @@
             android:id="@+id/smallQuizAns1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:onClick="action_smallQuizAns1_click"
             android:text="RadioButton" />
 
         <RadioButton
             android:id="@+id/smallQuizAns2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:onClick="action_smallQuizAns2_click"
             android:text="RadioButton" />
 
         <RadioButton
             android:id="@+id/smallQuizAns3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:onClick="action_smallQuizAns3_click"
             android:text="RadioButton" />
 
         <RadioButton
             android:id="@+id/smallQuizAns4"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:onClick="action_smallQuizAns4_click"
             android:text="RadioButton" />
     </RadioGroup>
 
