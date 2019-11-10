@@ -21,7 +21,7 @@
     <style name="My_spnniner">
         <item name="android:selectedWeekBackgroundColor">@android:color/holo_red_light</item>
         <item name="android:textColor">@android:color/holo_red_light</item>
-        <item name="android:textSize">14dp</item>
+        <item name="android:textSize">16dp</item>
     </style>
 
 </resources>
