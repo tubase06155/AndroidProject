@@ -24,8 +24,8 @@
 
     <EditText
         android:id="@+id/editLessonContent"
-        android:layout_width="387dp"
-        android:layout_height="365dp"
+        android:layout_width="370dp"
+        android:layout_height="330dp"
         android:layout_marginStart="7dp"
         android:layout_marginTop="200dp"
         android:background="@drawable/edittext_style"
@@ -89,7 +89,7 @@
         android:id="@+id/editLessonSubmit"
         android:layout_width="368dp"
         android:layout_height="55dp"
-        android:layout_marginTop="590dp"
+        android:layout_marginTop="535dp"
         android:background="@drawable/edittext_style"
         android:text="Edit Lesson"
         android:textAllCaps="false"

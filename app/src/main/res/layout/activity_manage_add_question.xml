@@ -7,24 +7,93 @@
     tools:context=".ManageAddQuestionActivity">
 
 
-    <Spinner
-        android:id="@+id/spinnerTrueAddQuestion"
-        android:layout_width="126dp"
-        android:layout_height="39dp"
-        android:layout_marginTop="296dp"
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="390dp"
+        android:text="True Answer:"
+        android:textColor="#030202"
+        android:textSize="14dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.589"
+        app:layout_constraintHorizontal_bias="0.003"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textView9"
-        android:layout_width="115dp"
-        android:layout_height="37dp"
-        android:layout_marginTop="312dp"
-        android:text="True Answer"
+        android:id="@+id/textView11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="47dp"
+        android:text="4"
+        android:textColor="#030202"
+        android:textSize="14dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.057"
+        app:layout_constraintHorizontal_bias="0.181"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView12" />
+
+    <TextView
+        android:id="@+id/textView12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="47dp"
+        android:text="3"
+        android:textColor="#030202"
+        android:textSize="14dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.181"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView13" />
+
+    <TextView
+        android:id="@+id/textView13"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="47dp"
+        android:text="2"
+        android:textColor="#030202"
+        android:textSize="14dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.181"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView14" />
+
+    <TextView
+        android:id="@+id/textView14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="7dp"
+        android:layout_marginTop="50dp"
+        android:text="1"
+        android:textColor="#030202"
+        android:textSize="14dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.166"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView9" />
+
+    <Spinner
+        android:id="@+id/spinnerTrueAddQuestion"
+        android:layout_width="126dp"
+        android:layout_height="39dp"
+        android:layout_marginTop="63dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.308"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/addQuestionOpt4"
+        android:theme="@style/My_spnniner"/>
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:text="Question"
+        android:textColor="#020101"
+        android:textSize="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.003"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -32,75 +101,93 @@
         android:id="@+id/addQuestionSubmit"
         android:layout_width="377dp"
         android:layout_height="52dp"
-        android:layout_marginTop="384dp"
-        android:text="Add Question"
+        android:layout_marginTop="80dp"
+        android:background="@drawable/edittext_style"
+        android:text="Add"
+        android:textAllCaps="false"
+        android:textSize="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.47"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/spinnerTrueAddQuestion" />
 
     <EditText
         android:id="@+id/addQuestionContent"
-        android:layout_width="387dp"
-        android:layout_height="43dp"
+        android:layout_width="316dp"
+        android:layout_height="40dp"
         android:layout_marginTop="16dp"
         android:ems="10"
+        android:gravity="fill"
         android:hint="Enter question content"
         android:inputType="textPersonName"
+        android:textSize="15dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.708"
+        app:layout_constraintHorizontal_bias="0.926"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/addQuestionOpt1"
-        android:layout_width="387dp"
-        android:layout_height="43dp"
-        android:layout_marginTop="52dp"
+        android:layout_width="316dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="30dp"
         android:ems="10"
-        android:hint="Enter question answer 1"
         android:inputType="textPersonName"
+        android:text="mm"
+        android:textSize="14dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.708"
+        app:layout_constraintHorizontal_bias="0.926"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/addQuestionContent" />
 
     <EditText
         android:id="@+id/addQuestionOpt2"
-        android:layout_width="387dp"
-        android:layout_height="43dp"
-        android:layout_marginTop="140dp"
+        android:layout_width="316dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="30dp"
         android:ems="10"
-        android:hint="Enter question answer 2"
         android:inputType="textPersonName"
+        android:textSize="14dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.708"
+        app:layout_constraintHorizontal_bias="0.926"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/addQuestionOpt1" />
 
     <EditText
         android:id="@+id/addQuestionOpt3"
-        android:layout_width="387dp"
-        android:layout_height="43dp"
-        android:layout_marginTop="192dp"
+        android:layout_width="316dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="30dp"
         android:ems="10"
-        android:hint="Enter question answer 3"
         android:inputType="textPersonName"
+        android:textSize="14dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.708"
+        app:layout_constraintHorizontal_bias="0.926"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/addQuestionOpt2" />
 
     <EditText
         android:id="@+id/addQuestionOpt4"
-        android:layout_width="387dp"
-        android:layout_height="43dp"
-        android:layout_marginTop="236dp"
+        android:layout_width="316dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="30dp"
         android:ems="10"
         android:hint="Enter question answer 4"
         android:inputType="textPersonName"
+        android:textSize="14dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.918"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/addQuestionOpt3" />
+
+    <TextView
+        android:id="@+id/textView15"
+        android:layout_width="52dp"
+        android:layout_height="36dp"
+        android:layout_marginTop="44dp"
+        android:text="Answer:"
+        android:textColor="#0A0707"
+        app:layout_constraintTop_toBottomOf="@+id/textView9"
+        tools:layout_editor_absoluteX="2dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
